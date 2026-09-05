@@ -1,5 +1,19 @@
 # 🛡️ Viper Phishing Detection & Analysis Platform
 
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black?logo=flask)
+![Scikit--learn](https://img.shields.io/badge/Scikit--learn-Machine%20Learning-orange?logo=scikit-learn)
+![SQLite](https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite)
+![Status](https://img.shields.io/badge/Status-Active-success)
+
+</p>
+
+<p align="center">
+  <strong>Multi-layered phishing URL detection using Machine Learning, DNS intelligence, domain analysis, threat reputation and explainable risk scoring.</strong>
+</p>
+
 A web-based cybersecurity platform for analyzing URLs and identifying potential phishing threats using **rule-based detection, machine learning, DNS intelligence, domain analysis, and threat reputation data**.
 
 > Built for cybersecurity research, analysis, education, and defensive security experimentation.
@@ -345,3 +359,20 @@ The platform provides automated risk assessments and should not be considered a 
 ---
 
 **Viper Phishing Detection & Analysis Platform — Built for cybersecurity research, analysis & education.**
+---
+
+## 🖥️ Platform Screenshots
+
+### Dashboard
+![Viper Phishing Detection Dashboard](screenshots/dashboard.png)
+
+### Phishing URL Analysis
+![Phishing URL Analysis](screenshots/phishing-analysis.png)
+
+### Analytics & Scan History
+![Analytics and Scan History](screenshots/analytics.png)
+
+### Security Report
+![Generated Security Report](screenshots/report.png)
+
+---
