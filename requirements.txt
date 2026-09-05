@@ -1,0 +1,11 @@
+﻿Flask
+dnspython
+tldextract
+requests
+reportlab
+scikit-learn
+pandas
+numpy
+joblib
+gunicorn
+python-dotenv
