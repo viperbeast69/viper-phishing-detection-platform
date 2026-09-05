@@ -1,0 +1,4727 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Viper Cybersecurity Phishing Detection & Analysis Platform"
+    >
+
+    <meta
+        name="author"
+        content="Avinash Kumar"
+    >
+
+    <title>
+        Viper Cybersecurity | Phishing Detection & Analysis
+    </title>
+
+
+    <!-- =====================================================
+         FONTS
+    ====================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='css/style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     BACKGROUND
+========================================================= -->
+
+<div class="background-grid"></div>
+
+<div class="background-glow glow-one"></div>
+
+<div class="background-glow glow-two"></div>
+
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <!-- BRAND -->
+
+        <a
+            href="#dashboard"
+            class="brand"
+        >
+
+            <div class="brand-logo">
+
+                <img
+                    src="{{ url_for('static', filename='images/viper-logo.png') }}"
+                    alt="Viper Cybersecurity Logo"
+                    onerror="this.style.display='none';"
+                >
+
+            </div>
+
+
+            <div class="brand-text">
+
+                <span class="brand-name">
+                    VIPER CYBERSECURITY
+                </span>
+
+                <span class="brand-subtitle">
+                    PHISHING DETECTION & ANALYSIS
+                </span>
+
+            </div>
+
+        </a>
+
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="nav-links">
+
+            <a
+                href="#dashboard"
+                class="nav-link active"
+            >
+                Dashboard
+            </a>
+
+            <a
+                href="#scanner"
+                class="nav-link"
+            >
+                Scanner
+            </a>
+
+            <a
+                href="#results"
+                class="nav-link"
+            >
+                Results
+            </a>
+
+            <a
+                href="#history"
+                class="nav-link"
+            >
+                History
+            </a>
+
+            <a
+                href="#analytics"
+                class="nav-link"
+            >
+                Analytics
+            </a>
+
+            <a
+                href="#about"
+                class="nav-link"
+            >
+                About
+            </a>
+
+        </nav>
+
+
+
+        <!-- SYSTEM STATUS -->
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            SYSTEM ONLINE
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     MAIN
+========================================================= -->
+
+<main id="dashboard">
+
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero-section">
+
+    <div class="hero-container">
+
+
+        <div class="hero-badge">
+
+            <span class="pulse-dot"></span>
+
+            AI-POWERED SECURITY ANALYSIS
+
+        </div>
+
+
+
+        <h1 class="hero-title">
+
+            PHISHING DETECTION
+
+            <br>
+
+            <span>
+                & ANALYSIS
+            </span>
+
+        </h1>
+
+
+
+        <p class="hero-description">
+
+            Analyze suspicious URLs using machine learning,
+            DNS intelligence, domain analysis, reputation
+            intelligence and explainable risk scoring.
+
+        </p>
+
+
+
+        <div class="engine-pills">
+
+            <span>
+                <i>✓</i>
+                Random Forest ML
+            </span>
+
+            <span>
+                <i>✓</i>
+                DNS Analysis
+            </span>
+
+            <span>
+                <i>✓</i>
+                Domain Intelligence
+            </span>
+
+            <span>
+                <i>✓</i>
+                Reputation Intelligence
+            </span>
+
+            <span>
+                <i>✓</i>
+                Risk Engine
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SCANNER
+========================================================= -->
+
+<section
+    id="scanner"
+    class="scanner-section section-container"
+>
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                SECURITY SCANNER
+            </span>
+
+            <h2>
+                Analyze a URL
+            </h2>
+
+            <p>
+                Enter a URL to perform multi-layer phishing
+                detection and security analysis.
+            </p>
+
+        </div>
+
+
+        <div class="scanner-engine-status">
+
+            <span class="status-dot"></span>
+
+            5 ANALYSIS ENGINES READY
+
+        </div>
+
+    </div>
+
+
+
+    <div class="scanner-card">
+
+
+        <div class="input-header">
+
+            <span class="input-label">
+                TARGET URL
+            </span>
+
+            <span class="input-hint">
+                Analyze without visiting the website
+            </span>
+
+        </div>
+
+
+
+        <div class="url-input-wrapper">
+
+
+            <div class="url-icon">
+                🔗
+            </div>
+
+
+            <input
+                type="text"
+                id="urlInput"
+                class="url-input"
+                placeholder="https://example.com/login"
+                autocomplete="off"
+                spellcheck="false"
+            >
+
+
+            <button
+                type="button"
+                id="scanButton"
+                class="scan-button"
+            >
+
+                ANALYZE URL
+
+                <span class="button-arrow">
+                    →
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+
+        <div
+            id="inputError"
+            class="input-error hidden"
+        ></div>
+
+
+
+        <div class="scanner-security-note">
+
+            🔒
+
+            The platform performs URL, DNS, domain, reputation
+            and ML analysis without loading the submitted webpage.
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         PROGRESS
+    ====================================================== -->
+
+    <div
+        id="scanProgress"
+        class="scan-progress hidden"
+    >
+
+        <div class="progress-header">
+
+            <h3>
+                Running Security Analysis
+            </h3>
+
+            <span
+                id="progressPercentage"
+                class="progress-percentage"
+            >
+                0%
+            </span>
+
+        </div>
+
+
+        <div class="progress-track">
+
+            <div
+                id="progressBar"
+                class="progress-bar"
+            ></div>
+
+        </div>
+
+
+
+        <div class="analysis-steps">
+
+
+            <div
+                id="stepFeature"
+                class="analysis-step"
+            >
+
+                <span class="step-icon">
+                    ◉
+                </span>
+
+                Feature Extraction
+
+            </div>
+
+
+            <div
+                id="stepDNS"
+                class="analysis-step"
+            >
+
+                <span class="step-icon">
+                    ◉
+                </span>
+
+                DNS Intelligence
+
+            </div>
+
+
+            <div
+                id="stepDomain"
+                class="analysis-step"
+            >
+
+                <span class="step-icon">
+                    ◉
+                </span>
+
+                Domain Analysis
+
+            </div>
+
+
+            <div
+                id="stepReputation"
+                class="analysis-step"
+            >
+
+                <span class="step-icon">
+                    ◉
+                </span>
+
+                Reputation Analysis
+
+            </div>
+
+
+            <div
+                id="stepML"
+                class="analysis-step"
+            >
+
+                <span class="step-icon">
+                    ◉
+                </span>
+
+                Machine Learning
+
+            </div>
+
+
+            <div
+                id="stepRisk"
+                class="analysis-step"
+            >
+
+                <span class="step-icon">
+                    ◉
+                </span>
+
+                Risk Calculation
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     RESULTS
+========================================================= -->
+
+<section
+    id="results"
+    class="results-section section-container hidden"
+>
+
+
+    <!-- RESULT BANNER -->
+
+    <div
+        id="securityBanner"
+        class="security-banner"
+    >
+
+        <div class="security-banner-left">
+
+
+            <div
+                id="securityIcon"
+                class="security-icon"
+            >
+                !
+            </div>
+
+
+            <div>
+
+                <h2 id="classificationText">
+                    Analysis Result
+                </h2>
+
+                <p id="scannedUrl">
+                    —
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="security-banner-right">
+
+            <span id="severityBadge">
+                —
+            </span>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- RISK OVERVIEW -->
+
+    <div class="risk-overview-grid">
+
+
+        <!-- OVERALL RISK -->
+
+        <div class="dashboard-card risk-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        RISK ASSESSMENT
+                    </span>
+
+                    <h3>
+                        Overall Risk
+                    </h3>
+
+                </div>
+
+
+                <div class="card-icon">
+                    R
+                </div>
+
+            </div>
+
+
+            <div class="risk-gauge-container">
+
+                <div
+                    id="riskGauge"
+                    class="risk-gauge gauge-safe"
+                >
+
+                    <div class="risk-gauge-inner">
+
+                        <span
+                            id="riskScore"
+                            class="risk-score"
+                        >
+                            0
+                        </span>
+
+                        <span class="risk-max">
+                            / 100
+                        </span>
+
+                        <span
+                            id="riskLevel"
+                            class="risk-level"
+                        >
+                            LOW RISK
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="confidence-row">
+
+                <span>
+                    Detection Confidence
+                </span>
+
+                <strong id="confidenceValue">
+                    0%
+                </strong>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COMPONENT SCORES -->
+
+        <div class="dashboard-card components-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        ENSEMBLE ENGINE
+                    </span>
+
+                    <h3>
+                        Detection Components
+                    </h3>
+
+                </div>
+
+
+                <div class="card-icon">
+                    AI
+                </div>
+
+            </div>
+
+
+            <div class="component-list">
+
+
+                <!-- RULE ENGINE -->
+
+                <div class="component">
+
+                    <div class="component-top">
+
+                        <div>
+
+                            <span class="component-name">
+                                Rule-Based Detection
+                            </span>
+
+                            <span class="component-description">
+                                URL & security indicators
+                            </span>
+
+                        </div>
+
+                        <strong id="ruleScore">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="component-bar">
+
+                        <div
+                            id="ruleBar"
+                            class="component-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ML -->
+
+                <div class="component">
+
+                    <div class="component-top">
+
+                        <div>
+
+                            <span class="component-name">
+                                Machine Learning
+                            </span>
+
+                            <span class="component-description">
+                                Random Forest probability
+                            </span>
+
+                        </div>
+
+                        <strong id="mlScore">
+                            0
+                        </strong>
+
+                    </div>
+
+
+                    <div class="component-bar">
+
+                        <div
+                            id="mlBar"
+                            class="component-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- REPUTATION -->
+
+                <div class="component">
+
+                    <div class="component-top">
+
+                        <div>
+
+                            <span class="component-name">
+                                Reputation Intelligence
+                            </span>
+
+                            <span class="component-description">
+                                External threat intelligence
+                            </span>
+
+                        </div>
+
+                        <strong id="reputationScore">
+                            N/A
+                        </strong>
+
+                    </div>
+
+
+                    <div class="component-bar">
+
+                        <div
+                            id="reputationBar"
+                            class="component-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         INDICATORS
+    ====================================================== -->
+
+    <div class="dashboard-card indicators-card">
+
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="section-label">
+                    EXPLAINABLE DETECTION
+                </span>
+
+                <h3>
+                    Security Indicators
+                </h3>
+
+            </div>
+
+
+            <span
+                id="indicatorCount"
+                class="count-badge"
+            >
+                0 INDICATORS
+            </span>
+
+        </div>
+
+
+
+        <div
+            id="indicatorsContainer"
+            class="indicators-container"
+        ></div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         DOMAIN + DNS
+    ====================================================== -->
+
+    <div class="intelligence-grid">
+
+
+        <!-- DOMAIN INTELLIGENCE -->
+
+        <div class="dashboard-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        DOMAIN INTELLIGENCE
+                    </span>
+
+                    <h3>
+                        Domain Analysis
+                    </h3>
+
+                </div>
+
+
+                <div class="card-icon">
+                    D
+                </div>
+
+            </div>
+
+
+            <div class="data-list">
+
+
+                <div class="data-row">
+
+                    <span>
+                        Hostname
+                    </span>
+
+                    <strong
+                        id="domainHostname"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        Registered Domain
+                    </span>
+
+                    <strong
+                        id="registeredDomain"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        Subdomain
+                    </span>
+
+                    <strong
+                        id="subdomain"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        TLD
+                    </span>
+
+                    <strong
+                        id="domainTld"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        Structure
+                    </span>
+
+                    <strong
+                        id="domainStructure"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- DNS INTELLIGENCE -->
+
+        <div class="dashboard-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        NETWORK INTELLIGENCE
+                    </span>
+
+                    <h3>
+                        DNS Analysis
+                    </h3>
+
+                </div>
+
+
+                <div class="card-icon">
+                    DNS
+                </div>
+
+            </div>
+
+
+            <div class="data-list">
+
+
+                <div class="data-row">
+
+                    <span>
+                        Resolution
+                    </span>
+
+                    <strong
+                        id="dnsResolved"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        IPv4 Addresses
+                    </span>
+
+                    <strong
+                        id="ipv4Addresses"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        IPv6 Addresses
+                    </span>
+
+                    <strong
+                        id="ipv6Addresses"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        Public IPs
+                    </span>
+
+                    <strong
+                        id="publicAddresses"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="data-row">
+
+                    <span>
+                        Private IPs
+                    </span>
+
+                    <strong
+                        id="privateAddresses"
+                        class="mono"
+                    >
+                        —
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MACHINE LEARNING
+    ====================================================== -->
+
+    <div class="dashboard-card ml-card">
+
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="section-label">
+                    MACHINE LEARNING ENGINE
+                </span>
+
+                <h3>
+                    Random Forest Analysis
+                </h3>
+
+            </div>
+
+
+            <span class="model-badge">
+                MODEL ACTIVE
+            </span>
+
+        </div>
+
+
+
+        <div class="ml-result-grid">
+
+
+            <div class="ml-main-result">
+
+                <span class="ml-label">
+                    MODEL PREDICTION
+                </span>
+
+                <strong
+                    id="mlPrediction"
+                    class="ml-prediction"
+                >
+                    —
+                </strong>
+
+                <p id="mlMessage">
+                    Machine learning analysis pending.
+                </p>
+
+            </div>
+
+
+
+            <div class="probability-container">
+
+
+                <!-- PHISHING -->
+
+                <div>
+
+                    <div class="probability-header">
+
+                        <span>
+                            Phishing Probability
+                        </span>
+
+                        <strong id="phishingProbability">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="probability-bar">
+
+                        <div
+                            id="phishingProbabilityBar"
+                            class="probability-fill phishing-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- LEGITIMATE -->
+
+                <div>
+
+                    <div class="probability-header">
+
+                        <span>
+                            Legitimate Probability
+                        </span>
+
+                        <strong id="legitimateProbability">
+                            0%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="probability-bar">
+
+                        <div
+                            id="legitimateProbabilityBar"
+                            class="probability-fill legitimate-fill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         URL FEATURES
+    ====================================================== -->
+
+    <div class="dashboard-card">
+
+
+        <div class="card-heading">
+
+            <div>
+
+                <span class="section-label">
+                    URL FEATURE EXTRACTION
+                </span>
+
+                <h3>
+                    Extracted Security Features
+                </h3>
+
+            </div>
+
+
+            <div class="card-icon">
+                F
+            </div>
+
+        </div>
+
+
+
+        <div
+            id="featuresContainer"
+            class="features-grid"
+        ></div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         REPORT ACTIONS
+    ====================================================== -->
+
+    <div class="report-actions">
+
+
+        <div>
+
+            <h3>
+                Export Security Report
+            </h3>
+
+        </div>
+
+
+        <div class="report-buttons">
+
+
+            <button
+                type="button"
+                id="jsonReportButton"
+                class="report-button"
+            >
+                <span>↓</span>
+                JSON
+            </button>
+
+
+            <button
+                type="button"
+                id="textReportButton"
+                class="report-button"
+            >
+                <span>↓</span>
+                TXT
+            </button>
+
+
+            <button
+                type="button"
+                id="pdfReportButton"
+                class="report-button primary-report"
+            >
+                <span>↓</span>
+                PDF
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     HISTORY
+========================================================= -->
+
+<section
+    id="history"
+    class="history-section section-container"
+>
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                SCAN HISTORY
+            </span>
+
+            <h2>
+                Previous Analyses
+            </h2>
+
+            <p>
+                Review previously analyzed URLs and their
+                associated security assessments.
+            </p>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="refreshHistory"
+            class="outline-button"
+        >
+            ↻ REFRESH
+        </button>
+
+    </div>
+
+
+
+    <div class="dashboard-card history-card">
+
+
+        <div class="history-toolbar">
+
+
+            <div class="history-search">
+
+                <span>
+                    🔎
+                </span>
+
+                <input
+                    type="text"
+                    id="historySearch"
+                    placeholder="Search scanned URLs..."
+                    autocomplete="off"
+                >
+
+            </div>
+
+
+            <select
+                id="historyFilter"
+                class="history-filter"
+            >
+
+                <option value="all">
+                    All Results
+                </option>
+
+                <option value="safe">
+                    Likely Safe
+                </option>
+
+                <option value="suspicious">
+                    Suspicious
+                </option>
+
+                <option value="phishing">
+                    Likely Phishing
+                </option>
+
+            </select>
+
+
+        </div>
+
+
+
+        <div class="table-wrapper">
+
+
+            <table class="history-table">
+
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            ID
+                        </th>
+
+                        <th>
+                            URL
+                        </th>
+
+                        <th>
+                            RISK
+                        </th>
+
+                        <th>
+                            CLASSIFICATION
+                        </th>
+
+                        <th>
+                            SEVERITY
+                        </th>
+
+                        <th>
+                            CONFIDENCE
+                        </th>
+
+                        <th>
+                            DATE
+                        </th>
+
+                        <th>
+                            ACTION
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="historyTableBody">
+
+                    <tr>
+
+                        <td
+                            colspan="8"
+                            class="empty-table"
+                        >
+                            Loading scan history...
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ANALYTICS
+========================================================= -->
+
+<section
+    id="analytics"
+    class="analytics-section section-container"
+>
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                SECURITY ANALYTICS
+            </span>
+
+            <h2>
+                Detection Overview
+            </h2>
+
+            <p>
+                Aggregated statistics from the local scan history.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- STATISTICS -->
+
+    <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <span class="stat-icon">
+                Σ
+            </span>
+
+            <span class="stat-label">
+                TOTAL SCANS
+            </span>
+
+            <strong
+                id="totalScans"
+                class="stat-value"
+            >
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card safe-stat">
+
+            <span class="stat-icon">
+                ✓
+            </span>
+
+            <span class="stat-label">
+                LIKELY SAFE
+            </span>
+
+            <strong
+                id="safeScans"
+                class="stat-value"
+            >
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card suspicious-stat">
+
+            <span class="stat-icon">
+                !
+            </span>
+
+            <span class="stat-label">
+                SUSPICIOUS
+            </span>
+
+            <strong
+                id="suspiciousScans"
+                class="stat-value"
+            >
+                0
+            </strong>
+
+        </div>
+
+
+
+        <div class="stat-card phishing-stat">
+
+            <span class="stat-icon">
+                ⚠
+            </span>
+
+            <span class="stat-label">
+                LIKELY PHISHING
+            </span>
+
+            <strong
+                id="phishingScans"
+                class="stat-value"
+            >
+                0
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ANALYTICS -->
+
+    <div class="analytics-grid">
+
+
+        <!-- DISTRIBUTION -->
+
+        <div class="dashboard-card">
+
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        DISTRIBUTION
+                    </span>
+
+                    <h3>
+                        Classification Breakdown
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="distribution-chart">
+
+
+                <div class="distribution-row">
+
+                    <div class="distribution-label">
+
+                        <span class="chart-dot safe-dot"></span>
+
+                        Likely Safe
+
+                    </div>
+
+                    <strong id="safePercentage">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="distribution-track">
+
+                    <div
+                        id="safeDistribution"
+                        class="distribution-fill safe-distribution"
+                    ></div>
+
+                </div>
+
+
+
+                <div class="distribution-row">
+
+                    <div class="distribution-label">
+
+                        <span class="chart-dot suspicious-dot"></span>
+
+                        Suspicious
+
+                    </div>
+
+                    <strong id="suspiciousPercentage">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="distribution-track">
+
+                    <div
+                        id="suspiciousDistribution"
+                        class="distribution-fill suspicious-distribution"
+                    ></div>
+
+                </div>
+
+
+
+                <div class="distribution-row">
+
+                    <div class="distribution-label">
+
+                        <span class="chart-dot phishing-dot"></span>
+
+                        Likely Phishing
+
+                    </div>
+
+                    <strong id="phishingPercentage">
+                        0%
+                    </strong>
+
+                </div>
+
+
+                <div class="distribution-track">
+
+                    <div
+                        id="phishingDistribution"
+                        class="distribution-fill phishing-distribution"
+                    ></div>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- ENGINE STATUS -->
+
+        <div class="dashboard-card">
+
+
+            <div class="card-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        PLATFORM HEALTH
+                    </span>
+
+                    <h3>
+                        Detection Engines
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="engine-status-list">
+
+
+                <div class="engine-status-item">
+
+                    <span
+                        id="featureStatus"
+                        class="engine-status-indicator online"
+                    ></span>
+
+                    <div>
+
+                        <strong>
+                            Feature Extraction
+                        </strong>
+
+                        <span>
+                            URL security characteristics
+                        </span>
+
+                    </div>
+
+                    <b>
+                        READY
+                    </b>
+
+                </div>
+
+
+
+                <div class="engine-status-item">
+
+                    <span
+                        id="dnsStatus"
+                        class="engine-status-indicator online"
+                    ></span>
+
+                    <div>
+
+                        <strong>
+                            DNS Analyzer
+                        </strong>
+
+                        <span>
+                            Hostname resolution
+                        </span>
+
+                    </div>
+
+                    <b>
+                        READY
+                    </b>
+
+                </div>
+
+
+
+                <div class="engine-status-item">
+
+                    <span
+                        id="domainStatus"
+                        class="engine-status-indicator online"
+                    ></span>
+
+                    <div>
+
+                        <strong>
+                            Domain Analyzer
+                        </strong>
+
+                        <span>
+                            Domain structure intelligence
+                        </span>
+
+                    </div>
+
+                    <b>
+                        READY
+                    </b>
+
+                </div>
+
+
+
+                <div class="engine-status-item">
+
+                    <span
+                        id="mlStatus"
+                        class="engine-status-indicator online"
+                    ></span>
+
+                    <div>
+
+                        <strong>
+                            Random Forest ML
+                        </strong>
+
+                        <span>
+                            Phishing probability model
+                        </span>
+
+                    </div>
+
+                    <b>
+                        READY
+                    </b>
+
+                </div>
+
+
+
+                <div class="engine-status-item">
+
+                    <span
+                        id="reputationStatus"
+                        class="engine-status-indicator online"
+                    ></span>
+
+                    <div>
+
+                        <strong>
+                            Reputation Intelligence
+                        </strong>
+
+                        <span>
+                            VirusTotal integration
+                        </span>
+
+                    </div>
+
+                    <b id="reputationEngineStatus">
+                        CHECK
+                    </b>
+
+                </div>
+
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT / AUTHOR
+========================================================= -->
+
+<section
+    id="about"
+    class="about-section section-container"
+>
+
+
+    <div class="section-heading">
+
+        <div>
+
+            <span class="section-label">
+                PROJECT INFORMATION
+            </span>
+
+            <h2>
+                About the Platform
+            </h2>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="about-card">
+
+
+        <!-- LOGO -->
+
+        <div class="about-logo">
+
+            <img
+                src="{{ url_for('static', filename='images/viper-logo.png') }}"
+                alt="Viper Cybersecurity"
+                onerror="this.style.display='none';"
+            >
+
+        </div>
+
+
+
+        <!-- AUTHOR -->
+
+        <div class="about-content">
+
+
+            <span class="section-label">
+                AUTHOR
+            </span>
+
+
+            <h2>
+                Avinash Kumar
+            </h2>
+
+
+            <div class="about-role">
+                Cybersecurity Research & Security Engineering
+            </div>
+
+
+
+            <p class="about-description">
+
+                Viper Cybersecurity's Phishing Detection &
+                Analysis Platform is a defensive cybersecurity
+                project designed to analyze suspicious URLs
+                using multiple security intelligence layers.
+
+                The platform combines rule-based detection,
+                machine learning, DNS analysis, domain
+                intelligence, reputation analysis and
+                explainable risk scoring.
+
+            </p>
+
+
+
+            <!-- SOCIAL LINKS -->
+
+            <div class="social-links">
+
+
+                <!-- INSTAGRAM -->
+
+                <a
+                    href="https://www.instagram.com/viper_cybersecurity"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+                >
+
+                    <span>
+                        IG
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Instagram
+                        </strong>
+
+                        <small>
+                            @viper_cybersecurity
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- GITHUB -->
+
+                <a
+                    href="https://github.com/viperbeast69"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+                >
+
+                    <span>
+                        GH
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            GitHub
+                        </strong>
+
+                        <small>
+                            github.com/viperbeast69
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- LINKEDIN -->
+
+                <a
+                    href="https://www.linkedin.com/in/avinash-kumar-617b49333"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-link"
+                >
+
+                    <span>
+                        IN
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            LinkedIn
+                        </strong>
+
+                        <small>
+                            Avinash Kumar
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+
+                <!-- EMAIL -->
+
+                <a
+                    href="mailto:vipercybersecurity@gmail.com"
+                    class="social-link"
+                >
+
+                    <span>
+                        @
+                    </span>
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+                        <small>
+                            vipercybersecurity@gmail.com
+                        </small>
+
+                    </div>
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer class="footer">
+
+
+    <div class="footer-container">
+
+
+        <div class="footer-brand">
+
+
+            <img
+                src="{{ url_for('static', filename='images/viper-logo.png') }}"
+                alt="Viper Logo"
+                onerror="this.style.display='none';"
+            >
+
+
+            <div>
+
+                <strong>
+                    Phishing Detection & Analysis Platform
+                </strong>
+
+                <span>
+                    Built for cybersecurity research, analysis & education.
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="footer-text">
+
+            © 2026 Avinash Kumar
+
+            <br>
+
+            Viper Cybersecurity
+
+
+        </div>
+
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- =========================================================
+     TOAST
+========================================================= -->
+
+<div
+    id="toast"
+    class="toast hidden"
+>
+
+    <span id="toastIcon">
+        ✓
+    </span>
+
+    <span id="toastMessage">
+        Operation completed.
+    </span>
+
+</div>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+/* ============================================================
+   GLOBAL STATE
+============================================================ */
+
+let currentScanId = null;
+
+let historyData = [];
+
+let scanInProgress = false;
+
+
+
+/* ============================================================
+   DOM HELPERS
+============================================================ */
+
+function $(id) {
+
+    return document.getElementById(id);
+
+}
+
+
+function showElement(element) {
+
+    if (!element) return;
+
+    element.classList.remove("hidden");
+
+}
+
+
+function hideElement(element) {
+
+    if (!element) return;
+
+    element.classList.add("hidden");
+
+}
+
+
+function setText(id, value) {
+
+    const element = $(id);
+
+    if (!element) return;
+
+    element.textContent =
+        value === null ||
+        value === undefined ||
+        value === ""
+            ? "—"
+            : value;
+
+}
+
+
+
+/* ============================================================
+   NUMBER HELPERS
+============================================================ */
+
+function numberValue(value, fallback = 0) {
+
+    const number = Number(value);
+
+    return Number.isFinite(number)
+        ? number
+        : fallback;
+
+}
+
+
+function percentage(value) {
+
+    return `${numberValue(value).toFixed(2)}%`;
+
+}
+
+
+function formatNumber(value) {
+
+    return numberValue(value).toLocaleString();
+
+}
+
+
+
+/* ============================================================
+   TOAST
+============================================================ */
+
+function showToast(message, type = "success") {
+
+    const toast = $("toast");
+
+    const icon = $("toastIcon");
+
+    const messageElement = $("toastMessage");
+
+    if (!toast) return;
+
+    messageElement.textContent = message;
+
+    icon.textContent =
+        type === "error"
+            ? "!"
+            : "✓";
+
+    toast.classList.toggle(
+        "toast-error",
+        type === "error"
+    );
+
+    showElement(toast);
+
+    clearTimeout(window.toastTimer);
+
+    window.toastTimer = setTimeout(() => {
+
+        hideElement(toast);
+
+    }, 3500);
+
+}
+
+
+
+/* ============================================================
+   PROGRESS
+============================================================ */
+
+function updateProgress(percent, stepId, text) {
+
+    setText(
+        "progressPercentage",
+        `${percent}%`
+    );
+
+    const progressBar = $("progressBar");
+
+    if (progressBar) {
+
+        progressBar.style.width =
+            `${percent}%`;
+
+    }
+
+    if (stepId) {
+
+        const step = $(stepId);
+
+        if (step) {
+
+            step.classList.add("active");
+
+            if (text) {
+
+                const icon =
+                    step.querySelector(".step-icon");
+
+                if (icon) {
+
+                    icon.textContent = "✓";
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+function resetProgress() {
+
+    setText(
+        "progressPercentage",
+        "0%"
+    );
+
+    const progressBar = $("progressBar");
+
+    if (progressBar) {
+
+        progressBar.style.width = "0%";
+
+    }
+
+    document
+        .querySelectorAll(".analysis-step")
+        .forEach(step => {
+
+            step.classList.remove(
+                "active",
+                "complete"
+            );
+
+            const icon =
+                step.querySelector(".step-icon");
+
+            if (icon) {
+
+                icon.textContent = "◉";
+
+            }
+
+        });
+
+}
+
+
+function completeStep(stepId) {
+
+    const step = $(stepId);
+
+    if (!step) return;
+
+    step.classList.remove("active");
+
+    step.classList.add("complete");
+
+    const icon =
+        step.querySelector(".step-icon");
+
+    if (icon) {
+
+        icon.textContent = "✓";
+
+    }
+
+}
+
+
+
+/* ============================================================
+   RISK CLASSIFICATION
+============================================================ */
+
+function getClassificationClass(classification) {
+
+    const value =
+        String(classification || "")
+            .toLowerCase();
+
+    if (value.includes("phishing")) {
+
+        return "classification-phishing";
+
+    }
+
+    if (value.includes("suspicious")) {
+
+        return "classification-suspicious";
+
+    }
+
+    return "classification-safe";
+
+}
+
+
+function getSeverityClass(severity) {
+
+    const value =
+        String(severity || "")
+            .toLowerCase();
+
+    if (value === "high") {
+
+        return "severity-high";
+
+    }
+
+    if (value === "medium") {
+
+        return "severity-medium";
+
+    }
+
+    return "severity-low";
+
+}
+
+
+
+/* ============================================================
+   RISK GAUGE
+============================================================ */
+
+function updateRiskGauge(score, classification) {
+
+    const gauge = $("riskGauge");
+
+    if (!gauge) return;
+
+    const safeScore =
+        Math.max(
+            0,
+            Math.min(
+                100,
+                numberValue(score)
+            )
+        );
+
+    const normalized =
+        safeScore / 100;
+
+    gauge.style.setProperty(
+        "--risk-percent",
+        `${normalized * 100}%`
+    );
+
+    gauge.classList.remove(
+        "gauge-safe",
+        "gauge-suspicious",
+        "gauge-phishing"
+    );
+
+    const classificationText =
+        String(classification || "")
+            .toLowerCase();
+
+    if (
+        classificationText.includes("phishing")
+    ) {
+
+        gauge.classList.add(
+            "gauge-phishing"
+        );
+
+        setText(
+            "riskLevel",
+            "HIGH RISK"
+        );
+
+    } else if (
+        classificationText.includes("suspicious")
+    ) {
+
+        gauge.classList.add(
+            "gauge-suspicious"
+        );
+
+        setText(
+            "riskLevel",
+            "MEDIUM RISK"
+        );
+
+    } else {
+
+        gauge.classList.add(
+            "gauge-safe"
+        );
+
+        setText(
+            "riskLevel",
+            "LOW RISK"
+        );
+
+    }
+
+    setText(
+        "riskScore",
+        safeScore.toFixed(2)
+    );
+
+}
+
+
+
+/* ============================================================
+   COMPONENT BARS
+============================================================ */
+
+function updateComponentBar(
+    value,
+    scoreId,
+    barId,
+    unavailable = false
+) {
+
+    const scoreElement = $(scoreId);
+
+    const bar = $(barId);
+
+    if (unavailable) {
+
+        if (scoreElement) {
+
+            scoreElement.textContent = "N/A";
+
+        }
+
+        if (bar) {
+
+            bar.style.width = "0%";
+
+        }
+
+        return;
+
+    }
+
+    const score =
+        Math.max(
+            0,
+            Math.min(
+                100,
+                numberValue(value)
+            )
+        );
+
+    if (scoreElement) {
+
+        scoreElement.textContent =
+            score.toFixed(2);
+
+    }
+
+    if (bar) {
+
+        bar.style.width =
+            `${score}%`;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   SECURITY BANNER
+============================================================ */
+
+function updateSecurityBanner(result) {
+
+    const banner = $("securityBanner");
+
+    const icon = $("securityIcon");
+
+    const classification =
+        String(
+            result.classification || ""
+        );
+
+    const severity =
+        String(
+            result.severity || ""
+        );
+
+    banner.classList.remove(
+        "safe-banner",
+        "suspicious-banner",
+        "phishing-banner"
+    );
+
+    icon.classList.remove(
+        "safe-icon",
+        "suspicious-icon",
+        "phishing-icon"
+    );
+
+
+    if (
+        classification
+            .toLowerCase()
+            .includes("phishing")
+    ) {
+
+        banner.classList.add(
+            "phishing-banner"
+        );
+
+        icon.classList.add(
+            "phishing-icon"
+        );
+
+        icon.textContent = "⚠";
+
+    } else if (
+        classification
+            .toLowerCase()
+            .includes("suspicious")
+    ) {
+
+        banner.classList.add(
+            "suspicious-banner"
+        );
+
+        icon.classList.add(
+            "suspicious-icon"
+        );
+
+        icon.textContent = "!";
+
+    } else {
+
+        banner.classList.add(
+            "safe-banner"
+        );
+
+        icon.classList.add(
+            "safe-icon"
+        );
+
+        icon.textContent = "✓";
+
+    }
+
+
+    setText(
+        "classificationText",
+        classification || "Analysis Result"
+    );
+
+    setText(
+        "scannedUrl",
+        result.url || "—"
+    );
+
+    setText(
+        "severityBadge",
+        severity
+            ? severity.toUpperCase()
+            : "UNKNOWN"
+    );
+
+}
+
+
+
+/* ============================================================
+   INDICATORS
+============================================================ */
+
+function renderIndicators(indicators) {
+
+    const container =
+        $("indicatorsContainer");
+
+    const count =
+        Array.isArray(indicators)
+            ? indicators.length
+            : 0;
+
+
+    setText(
+        "indicatorCount",
+        `${count} INDICATOR${count === 1 ? "" : "S"}`
+    );
+
+
+    if (!container) return;
+
+
+    if (count === 0) {
+
+        container.innerHTML = `
+
+            <div class="no-indicators">
+
+                <span>✓</span>
+
+                <div>
+
+                    <strong>
+                        No significant indicators detected
+                    </strong>
+
+                    <p>
+                        The available detection engines did
+                        not identify notable phishing indicators.
+                    </p>
+
+                </div>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    container.innerHTML =
+        indicators
+            .map(indicator => {
+
+                const severity =
+                    String(
+                        indicator.severity || "low"
+                    )
+                    .toLowerCase();
+
+                const title =
+                    escapeHtml(
+                        indicator.title ||
+                        "Security Indicator"
+                    );
+
+                const description =
+                    escapeHtml(
+                        indicator.description ||
+                        "No description available."
+                    );
+
+
+                return `
+
+                    <div
+                        class="indicator-item ${getSeverityClass(severity)}"
+                    >
+
+                        <div class="indicator-severity">
+
+                            ${escapeHtml(
+                                severity.toUpperCase()
+                            )}
+
+                        </div>
+
+
+                        <div class="indicator-content">
+
+                            <strong>
+                                ${title}
+                            </strong>
+
+                            <p>
+                                ${description}
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            })
+            .join("");
+
+}
+
+
+
+/* ============================================================
+   DOMAIN DATA
+============================================================ */
+
+function renderDomain(domain) {
+
+    domain = domain || {};
+
+    setText(
+        "domainHostname",
+        domain.hostname
+    );
+
+    setText(
+        "registeredDomain",
+        domain.registered_domain
+    );
+
+    setText(
+        "subdomain",
+        domain.subdomain
+    );
+
+    setText(
+        "domainTld",
+        domain.tld
+    );
+
+
+    const structure =
+        domain.is_valid_structure;
+
+    const structureElement =
+        $("domainStructure");
+
+
+    if (structureElement) {
+
+        structureElement.textContent =
+            structure === true
+                ? "VALID"
+                : structure === false
+                    ? "UNUSUAL"
+                    : "UNKNOWN";
+
+        structureElement.classList.remove(
+            "value-safe",
+            "value-warning",
+            "value-danger"
+        );
+
+
+        if (structure === true) {
+
+            structureElement.classList.add(
+                "value-safe"
+            );
+
+        } else if (structure === false) {
+
+            structureElement.classList.add(
+                "value-warning"
+            );
+
+        }
+
+    }
+
+}
+
+
+
+/* ============================================================
+   DNS DATA
+============================================================ */
+
+function renderDNS(dns) {
+
+    dns = dns || {};
+
+    const resolved =
+        dns.resolved;
+
+
+    const resolvedElement =
+        $("dnsResolved");
+
+
+    if (resolvedElement) {
+
+        resolvedElement.textContent =
+            resolved === true
+                ? "RESOLVED"
+                : resolved === false
+                    ? "FAILED"
+                    : "UNKNOWN";
+
+
+        resolvedElement.classList.remove(
+            "value-safe",
+            "value-warning",
+            "value-danger"
+        );
+
+
+        if (resolved === true) {
+
+            resolvedElement.classList.add(
+                "value-safe"
+            );
+
+        } else if (resolved === false) {
+
+            resolvedElement.classList.add(
+                "value-danger"
+            );
+
+        }
+
+    }
+
+
+    const ipv4 =
+        Array.isArray(dns.ipv4_addresses)
+            ? dns.ipv4_addresses
+            : [];
+
+
+    const ipv6 =
+        Array.isArray(dns.ipv6_addresses)
+            ? dns.ipv6_addresses
+            : [];
+
+
+    const publicAddresses =
+        Array.isArray(dns.public_addresses)
+            ? dns.public_addresses
+            : [];
+
+
+    const privateAddresses =
+        Array.isArray(dns.private_addresses)
+            ? dns.private_addresses
+            : [];
+
+
+    setText(
+        "ipv4Addresses",
+        ipv4.length
+            ? ipv4.join(", ")
+            : "None"
+    );
+
+
+    setText(
+        "ipv6Addresses",
+        ipv6.length
+            ? ipv6.join(", ")
+            : "None"
+    );
+
+
+    setText(
+        "publicAddresses",
+        publicAddresses.length
+            ? publicAddresses.join(", ")
+            : "None"
+    );
+
+
+    setText(
+        "privateAddresses",
+        privateAddresses.length
+            ? privateAddresses.join(", ")
+            : "None"
+    );
+
+}
+
+
+
+/* ============================================================
+   REPUTATION
+============================================================ */
+
+function renderReputation(reputation) {
+
+    reputation = reputation || {};
+
+
+    const malicious =
+        numberValue(
+            reputation.malicious
+        );
+
+
+    const suspicious =
+        numberValue(
+            reputation.suspicious
+        );
+
+
+    const harmless =
+        numberValue(
+            reputation.harmless
+        );
+
+
+    const total =
+        numberValue(
+            reputation.total_engines
+        );
+
+
+    const configured =
+        reputation.configured;
+
+
+    if (
+        configured === false ||
+        reputation.found === false
+    ) {
+
+        updateComponentBar(
+            0,
+            "reputationScore",
+            "reputationBar",
+            true
+        );
+
+        return;
+
+    }
+
+
+    let score =
+        numberValue(
+            reputation.reputation,
+            0
+        );
+
+
+    if (
+        !reputation.reputation &&
+        total > 0
+    ) {
+
+        score =
+            (
+                (
+                    malicious +
+                    suspicious * 0.5
+                ) /
+                total
+            ) * 100;
+
+    }
+
+
+    updateComponentBar(
+        score,
+        "reputationScore",
+        "reputationBar"
+    );
+
+}
+
+
+
+/* ============================================================
+   MACHINE LEARNING
+============================================================ */
+
+function renderML(ml) {
+
+    ml = ml || {};
+
+
+    const phishing =
+        numberValue(
+            ml.phishing_probability
+        );
+
+
+    const legitimate =
+        numberValue(
+            ml.legitimate_probability
+        );
+
+
+    setText(
+        "phishingProbability",
+        percentage(phishing)
+    );
+
+
+    setText(
+        "legitimateProbability",
+        percentage(legitimate)
+    );
+
+
+    const phishingBar =
+        $("phishingProbabilityBar");
+
+
+    const legitimateBar =
+        $("legitimateProbabilityBar");
+
+
+    if (phishingBar) {
+
+        phishingBar.style.width =
+            `${Math.min(
+                100,
+                Math.max(0, phishing)
+            )}%`;
+
+    }
+
+
+    if (legitimateBar) {
+
+        legitimateBar.style.width =
+            `${Math.min(
+                100,
+                Math.max(0, legitimate)
+            )}%`;
+
+    }
+
+
+    const prediction =
+        ml.prediction;
+
+
+    let predictionText;
+
+
+    if (
+        prediction === 1 ||
+        String(prediction) === "1"
+    ) {
+
+        predictionText =
+            "POTENTIALLY PHISHING";
+
+    } else if (
+        prediction === 0 ||
+        String(prediction) === "0"
+    ) {
+
+        predictionText =
+            "LIKELY LEGITIMATE";
+
+    } else {
+
+        predictionText =
+            "UNAVAILABLE";
+
+    }
+
+
+    setText(
+        "mlPrediction",
+        predictionText
+    );
+
+
+    if (ml.error) {
+
+        setText(
+            "mlMessage",
+            ml.error
+        );
+
+    } else {
+
+        setText(
+            "mlMessage",
+            `The Random Forest model evaluated this URL with ${percentage(phishing)} phishing probability and ${percentage(legitimate)} legitimate probability.`
+        );
+
+    }
+
+}
+
+
+
+/* ============================================================
+   FEATURES
+============================================================ */
+
+function renderFeatures(features) {
+
+    const container =
+        $("featuresContainer");
+
+    if (!container) return;
+
+
+    if (!features || typeof features !== "object") {
+
+        container.innerHTML = `
+
+            <div class="feature-item">
+
+                <span>
+                    Status
+                </span>
+
+                <strong>
+                    Unavailable
+                </strong>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    const preferredOrder = [
+
+        "url_length",
+        "domain_length",
+        "path_length",
+        "uses_https",
+        "subdomain_count",
+        "is_ip_address",
+        "suspicious_keyword_count",
+        "brand_keyword_count",
+        "digit_ratio",
+        "special_character_count",
+        "percent_encoding_count",
+        "query_parameter_count",
+        "has_punycode",
+        "is_url_shortener",
+        "suspicious_tld",
+        "has_port",
+        "double_slash_in_path",
+        "contains_at_symbol",
+        "domain_digit_count",
+        "domain_hyphen_count",
+        "dot_count",
+        "hyphen_count",
+        "slash_count",
+        "underscore_count"
+
+    ];
+
+
+    const keys =
+        preferredOrder.filter(
+            key =>
+                Object.prototype.hasOwnProperty.call(
+                    features,
+                    key
+                )
+        );
+
+
+    Object.keys(features)
+        .filter(
+            key =>
+                !keys.includes(key)
+        )
+        .forEach(key => {
+
+            keys.push(key);
+
+        });
+
+
+    container.innerHTML =
+        keys
+            .map(key => {
+
+                let value =
+                    features[key];
+
+
+                if (
+                    typeof value === "boolean"
+                ) {
+
+                    value =
+                        value
+                            ? "YES"
+                            : "NO";
+
+                }
+
+
+                if (
+                    typeof value === "number"
+                ) {
+
+                    value =
+                        Number.isInteger(value)
+                            ? value
+                            : value.toFixed(3);
+
+                }
+
+
+                return `
+
+                    <div class="feature-item">
+
+                        <span>
+                            ${escapeHtml(
+                                formatFeatureName(key)
+                            )}
+                        </span>
+
+                        <strong>
+                            ${escapeHtml(
+                                String(value)
+                            )}
+                        </strong>
+
+                    </div>
+
+                `;
+
+            })
+            .join("");
+
+}
+
+
+
+/* ============================================================
+   FEATURE NAME FORMATTER
+============================================================ */
+
+function formatFeatureName(value) {
+
+    return String(value)
+        .replaceAll("_", " ")
+        .replace(/\b\w/g, letter =>
+            letter.toUpperCase()
+        );
+
+}
+
+
+
+/* ============================================================
+   ESCAPE HTML
+============================================================ */
+
+function escapeHtml(value) {
+
+    return String(value)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+
+
+/* ============================================================
+   DISPLAY COMPLETE RESULT
+============================================================ */
+
+function displayResult(result) {
+
+    if (!result) {
+
+        showToast(
+            "No analysis result was returned.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    showElement(
+        $("results")
+    );
+
+
+    updateSecurityBanner(result);
+
+
+    updateRiskGauge(
+        result.score,
+        result.classification
+    );
+
+
+    setText(
+        "confidenceValue",
+        percentage(result.confidence)
+    );
+
+
+    const components =
+        result.components || {};
+
+
+    updateComponentBar(
+        components.rule_score,
+        "ruleScore",
+        "ruleBar"
+    );
+
+
+    updateComponentBar(
+        components.ml_score,
+        "mlScore",
+        "mlBar"
+    );
+
+
+    if (
+        components.reputation_score === null ||
+        components.reputation_score === undefined
+    ) {
+
+        updateComponentBar(
+            0,
+            "reputationScore",
+            "reputationBar",
+            true
+        );
+
+    } else {
+
+        updateComponentBar(
+            components.reputation_score,
+            "reputationScore",
+            "reputationBar"
+        );
+
+    }
+
+
+    renderIndicators(
+        result.indicators || []
+    );
+
+
+    renderDomain(
+        result.domain
+    );
+
+
+    renderDNS(
+        result.dns
+    );
+
+
+    renderML(
+        result.ml
+    );
+
+
+    renderFeatures(
+        result.features
+    );
+
+
+    renderReputation(
+        result.reputation
+    );
+
+
+    currentScanId =
+        result.scan_id ||
+        result.id ||
+        null;
+
+
+    document
+        .getElementById("results")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+
+}
+
+
+
+/* ============================================================
+   SCAN URL
+============================================================ */
+
+async function scanURL() {
+
+    if (scanInProgress) {
+
+        return;
+
+    }
+
+
+    const input =
+        $("urlInput");
+
+
+    const button =
+        $("scanButton");
+
+
+    const errorBox =
+        $("inputError");
+
+
+    const url =
+        input.value.trim();
+
+
+    hideElement(errorBox);
+
+
+    if (!url) {
+
+        errorBox.textContent =
+            "URL is required.";
+
+        showElement(errorBox);
+
+        input.focus();
+
+        return;
+
+    }
+
+
+    if (
+        !(
+            url.startsWith("http://") ||
+            url.startsWith("https://")
+        )
+    ) {
+
+        errorBox.textContent =
+            "Please enter a complete URL beginning with http:// or https://";
+
+        showElement(errorBox);
+
+        input.focus();
+
+        return;
+
+    }
+
+
+    scanInProgress = true;
+
+    button.disabled = true;
+
+    button.innerHTML =
+        "ANALYZING <span class='button-arrow'>...</span>";
+
+
+    hideElement(
+        $("results")
+    );
+
+
+    showElement(
+        $("scanProgress")
+    );
+
+
+    resetProgress();
+
+
+    try {
+
+
+        updateProgress(
+            10,
+            "stepFeature"
+        );
+
+
+        await delay(180);
+
+        completeStep("stepFeature");
+
+
+        updateProgress(
+            28,
+            "stepDNS"
+        );
+
+
+        await delay(180);
+
+        completeStep("stepDNS");
+
+
+        updateProgress(
+            43,
+            "stepDomain"
+        );
+
+
+        await delay(180);
+
+        completeStep("stepDomain");
+
+
+        updateProgress(
+            58,
+            "stepReputation"
+        );
+
+
+        await delay(180);
+
+        completeStep("stepReputation");
+
+
+        updateProgress(
+            76,
+            "stepML"
+        );
+
+
+        await delay(180);
+
+        completeStep("stepML");
+
+
+        updateProgress(
+            90,
+            "stepRisk"
+        );
+
+
+
+        const response =
+            await fetch(
+                "/api/scan",
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type":
+                            "application/json"
+                    },
+
+                    body:
+                        JSON.stringify({
+                            url: url
+                        })
+                }
+            );
+
+
+        let data;
+
+
+        try {
+
+            data =
+                await response.json();
+
+        } catch {
+
+            throw new Error(
+                "The server returned an invalid response."
+            );
+
+        }
+
+
+        if (!response.ok || data.success === false) {
+
+            throw new Error(
+                data.error ||
+                "URL analysis failed."
+            );
+
+        }
+
+
+        completeStep("stepRisk");
+
+
+        updateProgress(
+            100,
+            null
+        );
+
+
+        await delay(350);
+
+
+        hideElement(
+            $("scanProgress")
+        );
+
+
+        displayResult(
+            data.result ||
+            data
+        );
+
+
+        await loadHistory();
+
+        await loadStatistics();
+
+
+        showToast(
+            "URL analysis completed successfully."
+        );
+
+
+    } catch (error) {
+
+        hideElement(
+            $("scanProgress")
+        );
+
+
+        errorBox.textContent =
+            error.message ||
+            "Unable to connect to the analysis server.";
+
+        showElement(errorBox);
+
+
+        showToast(
+            error.message ||
+            "Analysis failed.",
+            "error"
+        );
+
+
+    } finally {
+
+        scanInProgress = false;
+
+        button.disabled = false;
+
+        button.innerHTML =
+            "ANALYZE URL <span class='button-arrow'>→</span>";
+
+    }
+
+}
+
+
+
+/* ============================================================
+   DELAY
+============================================================ */
+
+function delay(milliseconds) {
+
+    return new Promise(
+        resolve =>
+            setTimeout(
+                resolve,
+                milliseconds
+            )
+    );
+
+}
+
+
+
+/* ============================================================
+   HISTORY
+============================================================ */
+
+async function loadHistory() {
+
+    const table =
+        $("historyTableBody");
+
+
+    if (!table) return;
+
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/history"
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            !response.ok ||
+            data.success === false
+        ) {
+
+            throw new Error(
+                data.error ||
+                "Unable to load history."
+            );
+
+        }
+
+
+        historyData =
+            data.scans ||
+            data.history ||
+            data.results ||
+            [];
+
+
+        renderHistory(
+            historyData
+        );
+
+
+    } catch (error) {
+
+        table.innerHTML = `
+
+            <tr>
+
+                <td
+                    colspan="8"
+                    class="empty-table error-table"
+                >
+
+                    Unable to load scan history.
+
+                </td>
+
+            </tr>
+
+        `;
+
+    }
+
+}
+
+
+
+/* ============================================================
+   HISTORY TABLE
+============================================================ */
+
+function renderHistory(scans) {
+
+    const table =
+        $("historyTableBody");
+
+
+    if (!table) return;
+
+
+    if (!Array.isArray(scans) || scans.length === 0) {
+
+        table.innerHTML = `
+
+            <tr>
+
+                <td
+                    colspan="8"
+                    class="empty-table"
+                >
+
+                    No scans have been recorded yet.
+
+                </td>
+
+            </tr>
+
+        `;
+
+        return;
+
+    }
+
+
+    table.innerHTML =
+        scans
+            .map(scan => {
+
+                const classification =
+                    scan.classification ||
+                    "Unknown";
+
+
+                const classificationClass =
+                    getClassificationClass(
+                        classification
+                    );
+
+
+                const severity =
+                    scan.severity ||
+                    "—";
+
+
+                const score =
+                    numberValue(
+                        scan.score
+                    );
+
+
+                const confidence =
+                    numberValue(
+                        scan.confidence
+                    );
+
+
+                const timestamp =
+                    formatTimestamp(
+                        scan.timestamp
+                    );
+
+
+                return `
+
+                    <tr>
+
+                        <td>
+
+                            <span class="table-id">
+
+                                #${escapeHtml(
+                                    String(
+                                        scan.id ??
+                                        "—"
+                                    )
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="table-url"
+                                  title="${escapeHtml(
+                                      scan.url || ""
+                                  )}">
+
+                                ${escapeHtml(
+                                    scan.url || "—"
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="table-score">
+
+                                ${score.toFixed(2)}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span
+                                class="classification-badge ${classificationClass}"
+                            >
+
+                                ${escapeHtml(
+                                    classification
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="severity-text">
+
+                                ${escapeHtml(
+                                    String(
+                                        severity
+                                    ).toUpperCase()
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="table-date">
+
+                                ${confidence.toFixed(2)}%
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <span class="table-date">
+
+                                ${escapeHtml(
+                                    timestamp
+                                )}
+
+                            </span>
+
+                        </td>
+
+
+                        <td>
+
+                            <button
+                                type="button"
+                                class="view-button"
+                                onclick="viewHistoryScan(${Number(scan.id)})"
+                            >
+
+                                VIEW
+
+                            </button>
+
+                        </td>
+
+
+                    </tr>
+
+                `;
+
+            })
+            .join("");
+
+}
+
+
+
+/* ============================================================
+   HISTORY SEARCH / FILTER
+============================================================ */
+
+function filterHistory() {
+
+    const search =
+        String(
+            $("historySearch").value
+        )
+        .toLowerCase()
+        .trim();
+
+
+    const filter =
+        $("historyFilter").value;
+
+
+    const filtered =
+        historyData.filter(scan => {
+
+            const url =
+                String(
+                    scan.url || ""
+                )
+                .toLowerCase();
+
+
+            const classification =
+                String(
+                    scan.classification || ""
+                )
+                .toLowerCase();
+
+
+            const matchesSearch =
+                !search ||
+                url.includes(search);
+
+
+            let matchesFilter = true;
+
+
+            if (filter === "safe") {
+
+                matchesFilter =
+                    classification.includes(
+                        "safe"
+                    ) &&
+                    !classification.includes(
+                        "phishing"
+                    );
+
+            }
+
+
+            if (filter === "suspicious") {
+
+                matchesFilter =
+                    classification.includes(
+                        "suspicious"
+                    );
+
+            }
+
+
+            if (filter === "phishing") {
+
+                matchesFilter =
+                    classification.includes(
+                        "phishing"
+                    );
+
+            }
+
+
+            return (
+                matchesSearch &&
+                matchesFilter
+            );
+
+        });
+
+
+    renderHistory(
+        filtered
+    );
+
+}
+
+
+
+/* ============================================================
+   VIEW HISTORY SCAN
+============================================================ */
+
+async function viewHistoryScan(scanId) {
+
+    try {
+
+        const response =
+            await fetch(
+                `/api/history/${scanId}`
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            !response.ok ||
+            data.success === false
+        ) {
+
+            throw new Error(
+                data.error ||
+                "Unable to retrieve scan."
+            );
+
+        }
+
+
+        const result =
+            data.result ||
+            data.scan ||
+            data;
+
+
+        currentScanId =
+            scanId;
+
+
+        displayResult(
+            result
+        );
+
+
+        showToast(
+            `Loaded scan #${scanId}.`
+        );
+
+
+    } catch (error) {
+
+        showToast(
+            error.message ||
+            "Unable to load scan.",
+            "error"
+        );
+
+    }
+
+}
+
+
+
+/* ============================================================
+   STATISTICS
+============================================================ */
+
+async function loadStatistics() {
+
+    try {
+
+        const response =
+            await fetch(
+                "/api/statistics"
+            );
+
+
+        const data =
+            await response.json();
+
+
+        if (
+            !response.ok ||
+            data.success === false
+        ) {
+
+            throw new Error(
+                data.error ||
+                "Unable to load statistics."
+            );
+
+        }
+
+
+        const stats =
+            data.statistics ||
+            data.stats ||
+            data;
+
+
+        const total =
+            numberValue(
+                stats.total_scans ??
+                stats.total
+            );
+
+
+        const safe =
+            numberValue(
+                stats.safe_scans ??
+                stats.safe
+            );
+
+
+        const suspicious =
+            numberValue(
+                stats.suspicious_scans ??
+                stats.suspicious
+            );
+
+
+        const phishing =
+            numberValue(
+                stats.phishing_scans ??
+                stats.phishing
+            );
+
+
+        setText(
+            "totalScans",
+            formatNumber(total)
+        );
+
+
+        setText(
+            "safeScans",
+            formatNumber(safe)
+        );
+
+
+        setText(
+            "suspiciousScans",
+            formatNumber(suspicious)
+        );
+
+
+        setText(
+            "phishingScans",
+            formatNumber(phishing)
+        );
+
+
+        const safePercent =
+            total
+                ? (safe / total) * 100
+                : 0;
+
+
+        const suspiciousPercent =
+            total
+                ? (suspicious / total) * 100
+                : 0;
+
+
+        const phishingPercent =
+            total
+                ? (phishing / total) * 100
+                : 0;
+
+
+        setText(
+            "safePercentage",
+            `${safePercent.toFixed(1)}%`
+        );
+
+
+        setText(
+            "suspiciousPercentage",
+            `${suspiciousPercent.toFixed(1)}%`
+        );
+
+
+        setText(
+            "phishingPercentage",
+            `${phishingPercent.toFixed(1)}%`
+        );
+
+
+        const safeBar =
+            $("safeDistribution");
+
+
+        const suspiciousBar =
+            $("suspiciousDistribution");
+
+
+        const phishingBar =
+            $("phishingDistribution");
+
+
+        if (safeBar) {
+
+            safeBar.style.width =
+                `${safePercent}%`;
+
+        }
+
+
+        if (suspiciousBar) {
+
+            suspiciousBar.style.width =
+                `${suspiciousPercent}%`;
+
+        }
+
+
+        if (phishingBar) {
+
+            phishingBar.style.width =
+                `${phishingPercent}%`;
+
+        }
+
+
+    } catch (error) {
+
+        console.warn(
+            "Statistics unavailable:",
+            error
+        );
+
+    }
+
+}
+
+
+
+/* ============================================================
+   TIMESTAMP
+============================================================ */
+
+function formatTimestamp(timestamp) {
+
+    if (!timestamp) {
+
+        return "—";
+
+    }
+
+
+    const date =
+        new Date(timestamp);
+
+
+    if (
+        Number.isNaN(
+            date.getTime()
+        )
+    ) {
+
+        return String(
+            timestamp
+        );
+
+    }
+
+
+    return date.toLocaleString();
+
+}
+
+
+
+/* ============================================================
+   REPORT DOWNLOAD
+============================================================ */
+
+function downloadReport(type) {
+
+    if (!currentScanId) {
+
+        showToast(
+            "Run or select a scan first.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    let extension =
+        "json";
+
+
+    if (type === "text") {
+
+        extension = "text";
+
+    }
+
+
+    if (type === "pdf") {
+
+        extension = "pdf";
+
+    }
+
+
+    const url =
+        `/api/report/${currentScanId}/${extension}`;
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+
+/* ============================================================
+   NAVIGATION ACTIVE STATE
+============================================================ */
+
+function setupNavigation() {
+
+    const links =
+        document.querySelectorAll(
+            ".nav-link"
+        );
+
+
+    const sections =
+        document.querySelectorAll(
+            "main section[id]"
+        );
+
+
+    const observer =
+        new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (!entry.isIntersecting) {
+
+                        return;
+
+                    }
+
+
+                    const id =
+                        entry.target.id;
+
+
+                    links.forEach(link => {
+
+                        link.classList.toggle(
+                            "active",
+                            link.getAttribute(
+                                "href"
+                            ) === `#${id}`
+                        );
+
+                    });
+
+                });
+
+            },
+            {
+                rootMargin:
+                    "-30% 0px -60% 0px"
+            }
+        );
+
+
+    sections.forEach(section => {
+
+        observer.observe(
+            section
+        );
+
+    });
+
+}
+
+
+
+/* ============================================================
+   KEYBOARD SHORTCUT
+============================================================ */
+
+function setupKeyboardShortcuts() {
+
+    const input =
+        $("urlInput");
+
+
+    if (!input) return;
+
+
+    input.addEventListener(
+        "keydown",
+        event => {
+
+            if (
+                event.key === "Enter"
+            ) {
+
+                event.preventDefault();
+
+                scanURL();
+
+            }
+
+        }
+    );
+
+}
+
+
+
+/* ============================================================
+   EVENT LISTENERS
+============================================================ */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    () => {
+
+
+        /* SCANNER */
+
+        $("scanButton")
+            ?.addEventListener(
+                "click",
+                scanURL
+            );
+
+
+        /* HISTORY */
+
+        $("refreshHistory")
+            ?.addEventListener(
+                "click",
+                async () => {
+
+                    await loadHistory();
+
+                    await loadStatistics();
+
+                    showToast(
+                        "History refreshed."
+                    );
+
+                }
+            );
+
+
+        $("historySearch")
+            ?.addEventListener(
+                "input",
+                filterHistory
+            );
+
+
+        $("historyFilter")
+            ?.addEventListener(
+                "change",
+                filterHistory
+            );
+
+
+        /* REPORTS */
+
+        $("jsonReportButton")
+            ?.addEventListener(
+                "click",
+                () =>
+                    downloadReport(
+                        "json"
+                    )
+            );
+
+
+        $("textReportButton")
+            ?.addEventListener(
+                "click",
+                () =>
+                    downloadReport(
+                        "text"
+                    )
+            );
+
+
+        $("pdfReportButton")
+            ?.addEventListener(
+                "click",
+                () =>
+                    downloadReport(
+                        "pdf"
+                    )
+            );
+
+
+        /* INITIAL LOAD */
+
+        setupNavigation();
+
+        setupKeyboardShortcuts();
+
+        loadHistory();
+
+        loadStatistics();
+
+
+    }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
